@@ -1,23 +1,23 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+const icon = document.querySelector(".hamburger-icon");
+const menu = document.querySelector(".menu");
+const tri = document.querySelector(".tri");
+const tText = document.querySelector(".transform");
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+[icon, tri].forEach((ele) => {
+  ele.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+});
 
-setupCounter(document.querySelector('#counter'))
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.toggle("show");
+//     }
+//   });
+// });
+
+// tText.forEach((el) => {
+//   observer.observe(el);
+// });
