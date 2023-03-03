@@ -1,11 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Fraunces';
-}
+/* body {
+    font-family: 'Barlow';
+} */
 
 
 /* HERO Section */
@@ -25,6 +26,10 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0 6%;
+}
+
+.top h2 {
+    font-family: 'Barlow';
 }
 
 .top h2,
@@ -51,14 +56,14 @@ body {
 
 .menu.active {
     display: block;
-    position: fixed;
-    top: 17%;
+    position: absolute;
+    top: 15%;
     right: 6%;
     width: 88%;
     height: 40vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     z-index: 98;
     background-color: white;
     cursor: pointer;
@@ -66,27 +71,29 @@ body {
 
 .menu ul li a:hover {
     background: hsl(51, 100%, 49%);
-    width: 100px;
+    width: 200px;
     padding: 15px;
     border-radius: 30px;
     font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12git px;
 }
 
 .tri {
     position: absolute;
-    top: -30%;
+    top: -19%;
     right: 0;
     width: 0;
-    height: 20%;
+    height: 28%;
     border-top: 50px solid white;
     border-left: 50px solid transparent;
     transform: scaleY(-1);
 }
 
 .bar {
-    width: 40px;
+    width: 28px;
     height: 2px;
-    margin: 10px 0;
+    margin: 6px 0;
     background-color: white;
 }
 
@@ -95,7 +102,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 18.5%;
 }
 
 .we-are {
@@ -108,6 +115,9 @@ body {
     text-align: center;
     flex-basis: 50%;
     word-wrap: break-word;
+    font-family: 'Fraunces';
+    font-weight: 900;
+    letter-spacing: .2em;
 }
 
 .hero-text svg {
@@ -125,17 +135,59 @@ body {
 }
 
 .transform-text {
-    height: 300px;
-    padding: 0 6%;
+    height: 440px;
+    padding: 13% 6%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .transform-text p {
     text-align: center;
+    font-family: 'Barlow';
+    font-weight: 800;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: hsl(232, 10%, 55%);
 }
+
+.tr-learn-more {
+    font-family: 'Fraunces';
+    font-size: 15px;
+    position: relative;
+}
+
+.tr-learn-more::after {
+    content: "";
+    position: absolute;
+    left: -9px;
+    right: -9px;
+    bottom: 8px;
+    height: 10px;
+    box-shadow: 0px 10px 2px #fef1bb;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.st-learn-more {
+    font-family: 'Fraunces';
+    font-size: 15px;
+    position: relative;
+}
+
+.st-learn-more::after {
+    content: "";
+    position: absolute;
+    left: -9px;
+    right: -9px;
+    bottom: 8px;
+    height: 10px;
+    box-shadow: 0px 10px 2px #fddad1;
+    border-radius: 10px;
+    z-index: -1;
+}
+
 
 .h2s {
     display: flex;
@@ -145,8 +197,9 @@ body {
 
 .h2s h2 {
     text-align: center;
-    flex-basis: 50%;
-    word-wrap: break-word;
+    font-family: 'Fraunces';
+    font-weight: 800;
+    font-size: 2.1em;
 }
 
 /* STAND OUT */
@@ -156,8 +209,8 @@ body {
 }
 
 .stand-out-text {
-    height: 300px;
-    padding: 0 6%;
+    height: 440px;
+    padding: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,6 +219,11 @@ body {
 
 .stand-out-text p {
     text-align: center;
+    font-family: 'Barlow';
+    font-weight: 800;
+    font-size: 1.1em;
+    line-height: 1.7em;
+    color: hsl(232, 10%, 55%);
 }
 
 /* GRAPHIC DESIGN */
@@ -182,7 +240,7 @@ body {
 
 .gd-text {
     height: 35%;
-    margin: 3% 10%;
+    margin: 3% 5%;
     display: inherit;
     flex-direction: inherit;
     align-items: center;
@@ -190,8 +248,16 @@ body {
     color: hsl(167, 40%, 24%);
 }
 
+.gd-text h2 {
+    font-family: 'Fraunces';
+    font-size: 1.7rem;
+}
+
 .gd-text p {
     text-align: center;
+    font-family: 'Barlow';
+    font-size: 1.01em;
+    line-height: 1.5em;
 }
 
 /* PHOTOGRAPHY */
@@ -207,8 +273,8 @@ body {
 }
 
 .p-text {
-    height: 35%;
-    margin: 3% 10%;
+    height: 30%;
+    margin: 10% 3%;
     display: inherit;
     flex-direction: inherit;
     align-items: center;
@@ -216,8 +282,15 @@ body {
     color: hsl(198, 62%, 26%);
 }
 
+.gd-text h2 {
+    font-family: 'Fraunces';
+}
+
 .p-text p {
     text-align: center;
+    font-family: 'Barlow';
+    font-size: 1.1em;
+    line-height: 1.5em;
 }
 
 /* TESTMONIALS */
@@ -235,23 +308,31 @@ body {
 
 .testmonials h3 {
     margin-top: 15%;
+    font-family: 'Fraunces';
+    font-size: 1em;
+    letter-spacing: .3em;
+    color: #a6a9a8;
 }
 
 .clients {
     display: flex;
     flex-direction: inherit;
     align-items: center;
-    height: 300px;
-    justify-content: space-evenly;
-    padding: 5% 10%;
+    height: 350px;
+    justify-content: space-between;
+    padding: 10%;
 }
 
-.clients p {
+.testimony {
     text-align: center;
+    font-family: 'Barlow';
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: hsl(213, 9%, 39%);
 }
 
 .clients img {
-    height: 100px;
+    height: 75px;
     border-radius: 50%;
 }
 
@@ -261,6 +342,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+}
+
+.c-name {
+    font-family: 'Fraunces';
+}
+
+.gray-out {
+    color: hsl(210, 4%, 67%);
+    font-family: 'Barlow';
+    font-size: 14px;
+    font-weight: 700;
 }
 
 /* GALLERY */
@@ -290,6 +383,7 @@ footer {
 
 footer h2 {
     color: #2c7466;
+    font-family: 'Barlow';
 }
 
 footer ul {
@@ -302,6 +396,7 @@ footer ul {
 footer ul li a {
     text-decoration: none;
     color: #539788;
+    font-family: 'Barlow';
 }
 
 .socials {
@@ -319,12 +414,10 @@ footer ul li a:hover {
     cursor: pointer;
 }
 
-.transform-text span:hover,
-.stand-out-text span:hover {
+.learn-more:hover,
+.learn-more:hover {
     cursor: pointer;
-    text-decoration: underline;
-    text-decoration-thickness: 6px;
-    text-decoration-color: #ffd101;
+    text-decoration-color: hsl(7, 99%, 70%);
     /* border-bottom: 8px solid #ffd101; */
 }
 
@@ -343,7 +436,6 @@ footer ul li a:hover {
         /* background-color: aqua; */
         display: flex;
         align-items: center;
-        height: 6vh;
     }
 
     .top h2 {
@@ -373,6 +465,10 @@ footer ul li a:hover {
 
     .hamburger-icon,
     .tri {
+        display: none;
+    }
+
+    .menu.active {
         display: none;
     }
 
@@ -409,14 +505,24 @@ footer ul li a:hover {
     .transform-text {
         grid-column: 1;
         grid-row: 1;
-        height: 100%;
         padding: 0 10%;
     }
 
     .transform img {
         width: 100%;
+        height: 100%;
         grid-column: 2;
         grid-row: 1;
+    }
+
+
+    .transform-text p,
+    .stand-out-text p {
+        font-size: 1em;
+    }
+
+    .stand-out-text {
+        height: 300px;
     }
 
     .transform-text span,
@@ -455,6 +561,7 @@ footer ul li a:hover {
     .h2s h2 {
         flex-basis: unset;
         word-wrap: normal;
+        font-size: 20px;
     }
 
     .h2s h2,
@@ -463,9 +570,6 @@ footer ul li a:hover {
         text-align: start;
     }
 
-    .h2s h2 {
-        font-size: 30px;
-    }
 
     .graphic-design {
         float: left;
@@ -485,11 +589,10 @@ footer ul li a:hover {
         /* background-size: cover; */
         background-position: center;
         height: 400px;
-        width: 505;
     }
 
     .p-text {
-        margin: 0% 10% 7%;
+        margin: 10%;
     }
 
     .client-cont {
@@ -543,7 +646,8 @@ footer ul li a:hover {
     }
 
     .transform-text {
-        padding: 0% 15% 0 15%;
+        padding: 10% 12%;
+        justify-content: space-evenly;
     }
 
     .transform-text p {
@@ -561,7 +665,7 @@ footer ul li a:hover {
 
     .stand-out-text {
         height: 100%;
-        padding: 0% 10% 0 10%
+        padding: 10% 10%
     }
 
     .stand-out-text p {
@@ -582,13 +686,8 @@ footer ul li a:hover {
         height: 470px;
     }
 
-    .gd-text {
-        height: 25%;
-        padding: 0 9%;
-    }
-
+    .gd-text,
     .p-text {
-        height: 25%;
         padding: 0 7%;
     }
 
@@ -627,6 +726,7 @@ footer ul li a:hover {
     .transform-text {
         padding: 0% 20% 0 20%;
         justify-content: center;
+        height: 700px;
     }
 
     .transform-text p {
@@ -663,7 +763,7 @@ footer ul li a:hover {
 
     .gd-text {
         height: 20%;
-        padding: 0 9%;
+        padding: 9%;
     }
 
     .gd-text h2,
@@ -674,6 +774,7 @@ footer ul li a:hover {
     .gd-text p,
     .p-text p {
         font-size: 25px;
+        margin-top: 5%;
     }
 
     .photography {
@@ -681,8 +782,8 @@ footer ul li a:hover {
     }
 
     .p-text {
-        height: 25%;
-        padding: 0 7%;
+        height: 20%;
+        padding: 9%;
     }
 
     .p-text h2 footer ul {
