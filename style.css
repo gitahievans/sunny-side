@@ -76,7 +76,7 @@
     border-radius: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 12git px;
+    font-size: 12px;
 }
 
 .tri {
@@ -450,6 +450,9 @@ footer ul li a:hover {
         height: 100%;
     }
 
+    .menu{
+        display: block;
+    }
     .menu ul {
         list-style: none;
         display: flex;
