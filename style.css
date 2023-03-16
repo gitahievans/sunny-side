@@ -143,6 +143,23 @@
     justify-content: space-around;
 }
 
+.hidden,
+.gallry-dktp {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+    /* transition: all .5s ease-out; */
+}
+
+
+.animate {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    z-index: 1;
+}
+
 .transform-text p {
     text-align: center;
     font-family: 'Barlow';
@@ -169,6 +186,8 @@
     border-radius: 10px;
     z-index: -1;
 }
+
+
 
 .st-learn-more {
     font-family: 'Fraunces';
@@ -450,9 +469,10 @@ footer ul li a:hover {
         height: 100%;
     }
 
-    .menu{
+    .menu {
         display: block;
     }
+
     .menu ul {
         list-style: none;
         display: flex;
